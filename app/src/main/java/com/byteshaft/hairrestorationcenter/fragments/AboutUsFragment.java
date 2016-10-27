@@ -8,6 +8,7 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.byteshaft.hairrestorationcenter.R;
@@ -25,6 +26,7 @@ public class AboutUsFragment extends Fragment {
     private View mBaseView;
     private TextView mAboutUsTextView;
     private String aboutUs;
+    private ImageView mImageView;
     private boolean foreground = false;
 
     @Override
@@ -32,6 +34,7 @@ public class AboutUsFragment extends Fragment {
         mBaseView = inflater.inflate(R.layout.aboutus_fragment, container, false);
         setHasOptionsMenu(true);
         mAboutUsTextView = (TextView) mBaseView.findViewById(R.id.textview_about_us);
+        mImageView = (ImageView) mBaseView.findViewById(R.id.about_us_image);
         if (AppGlobals.sIsInternetAvailable) {
             new AboutUsTask(false).execute();
         } else {

@@ -24,9 +24,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
+            <ImageView
+                android:id="@+id/about_us_image"
+                android:layout_below="@+id/heading_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/textview_about_us"
-        android:layout_below="@+id/heading_tv"
+        android:layout_below="@+id/about_us_image"
         android:padding="15dp"
         android:textSize="17sp"
         android:textColor="#000"
