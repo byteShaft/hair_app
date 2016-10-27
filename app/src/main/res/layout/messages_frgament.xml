@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/messages_text_view"
+            android:layout_marginTop="5dp"
+            android:text="Messages"
+            android:layout_marginBottom="2dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.byteshaft.hairrestorationcenter.utils.List
+            android:id="@+id/lv_chat"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#e4e4e4"
+            android:dividerHeight="1dp"
+            android:divider="#e4e4e4"
+            android:listSelector="@android:color/transparent"
+            android:stackFromBottom="true"
+            android:layout_marginBottom="80dp"
+            android:transcriptMode="alwaysScroll"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:background="@color/colorPrimary">
+
+        <EditText
+            style="@style/Widget.AppCompat.EditText"
+            android:id="@+id/et_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:lines="3"
+            android:textSize="20dp"
+            android:scrollbars="vertical"
+            android:minLines="2"
+            android:inputType="textMultiLine"
+            android:layout_weight="8"
+            android:background="@android:drawable/editbox_background_normal"/>
+
+        <ImageButton
+            style="@style/Widget.AppCompat.ImageButton"
+            android:id="@+id/button_chat_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/button_feedback"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:layout_weight="2"/>
+    </LinearLayout>
+</RelativeLayout>

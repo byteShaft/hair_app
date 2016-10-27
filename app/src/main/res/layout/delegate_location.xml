@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/location_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/location"/>
+
+        <ProgressBar
+            android:id="@+id/location_image_loading_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="5dp"
+        android:padding="2dp"
+        android:textStyle="italic"
+        android:clickable="true"
+        android:layout_below="@+id/image_container"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/phone_number_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="5dp"
+        android:clickable="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:layout_below="@+id/address"/>
+
+    <TextView
+        android:id="@+id/toll_free_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:clickable="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/phone_number_text_view"/>
+</RelativeLayout>
