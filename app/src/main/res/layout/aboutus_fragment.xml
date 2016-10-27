@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-            <ImageView
+            <WebView
                 android:id="@+id/about_us_image"
                 android:layout_below="@+id/heading_tv"
                 android:layout_width="match_parent"
